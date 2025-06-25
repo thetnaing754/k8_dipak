@@ -5,7 +5,7 @@ function App() {
 
   const fetchMessage = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/message');
+      const response = await fetch('http://localhost:5001/api/message');
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
