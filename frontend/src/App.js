@@ -1,12 +1,12 @@
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 function App() {
   const [message, setMessage] = useState('');
 
   const fetchMessage = async () => {
     try {
-      //const response = await fetch('http://localhost:5000/api/message');
-      const response = await fetch('http://backend-service/api/message');
+      const response = await fetch('http://localhost:5000/api/message');
+      //const response = await fetch('http://backend-service/api/message');
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
@@ -25,10 +25,10 @@ function App() {
 }
 
 export default App;
-*/
 
 
-import React, { useState } from 'react';
+
+/*import React, { useState } from 'react';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -58,3 +58,4 @@ function App() {
 }
 
 export default App;
+*/

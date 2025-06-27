@@ -19,9 +19,9 @@ spec:
           image: thetnaing3/k8-frontend:latest
           ports:
             - containerPort: 80
-          env:
-            - name: REACT_APP_API_URL
-              value: "http://backend-service"  # Adjust the backend service URL as needed
+          # env:
+          #   - name: REACT_APP_API_URL
+          #     value: "http://backend-service"  # Adjust the backend service URL as needed
 
 ---
 apiVersion: v1
