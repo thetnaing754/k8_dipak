@@ -1,20 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fullstack-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"  # specify your ingress class
+    # Optional: rewrite target if needed
+    # nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
-  ingressClassName: nginx  # 👈 This is the missing part
   rules:
-    - host: mynginx.local
-      http:
-        paths:
-          - path: /api(/|$)(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: backend-service
-                port:
-                  number: 80
-          - path: /()(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend-service
-                port:
-                  number: 80
+  - host: mynginx.local
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 80
