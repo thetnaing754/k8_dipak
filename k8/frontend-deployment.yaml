@@ -21,7 +21,7 @@ spec:
             - containerPort: 80
           env:
             - name: REACT_APP_API_URL
-              value: "http://mynginx.local"  # Ingress will route this
+              value: "http://mynginx.local/api"  # Ingress will route this
 
 ---
 apiVersion: v1
