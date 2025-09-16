@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service-v2
+  name: backend-service
 spec:
   selector:
     app: backend
